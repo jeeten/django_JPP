@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Articles</h1>
+<ul>
+{% for article in product_list %}
+    <li>{{ article.addeddate|date }} - {{ article.productname }} - {{ article.categoryid }} - {{ article.brandid }}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>     
+{% endblock %}
